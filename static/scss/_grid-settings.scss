@@ -1,0 +1,12 @@
+@import "neat/neat-helpers";
+
+$column: em(70);
+$gutter: em(28);
+$max-width: em(1148);
+
+//$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 6);
+$small-mobile: new-breakpoint(max-width 320px 4);
+
+$visual-grid: false;
+$visual-grid-color: red;

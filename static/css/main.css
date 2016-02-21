@@ -1,0 +1,117 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+@font-face {
+  font-family: "LatoBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lato/LatoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoBold.woff") format("woff"), url("../fonts/Lato/LatoBold.ttf") format("truetype"); }
+@font-face {
+  font-family: "LatoItalic";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lato/LatoItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoItalic.woff") format("woff"), url("../fonts/Lato/LatoItalic.ttf") format("truetype"); }
+@font-face {
+  font-family: "LatoLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lato/LatoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoLight.woff") format("woff"), url("../fonts/Lato/LatoLight.ttf") format("truetype"); }
+@font-face {
+  font-family: "LatoRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lato/LatoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/LatoRegular.woff") format("woff"), url("../fonts/Lato/LatoRegular.ttf") format("truetype"); }
+body {
+  font-family: LatoRegular, sans-serif; }
+
+div.container {
+  max-width: 71.75em;
+  margin-left: auto;
+  margin-right: auto; }
+  div.container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+div.content-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.43902%;
+  width: 82.92683%;
+  margin-left: 8.53659%; }
+  div.content-wrapper:last-child {
+    margin-right: 0; }
+
+.nav-header {
+  height: 12.5em;
+  line-height: 12.5em; }
+
+.logo {
+  font-family: LatoLight, sans-serif;
+  text-decoration: none;
+  font-size: 2.25em;
+  color: #26c6da !important;
+  float: left; }
+  .logo span {
+    font-family: LatoBold, sans-serif;
+    color: #828282; }
+  .logo:hover {
+    text-decoration: none; }
+
+.navigation {
+  float: right; }
+
+.navigation > .nav-link {
+  position: relative;
+  font-family: LatoBold, sans-serif;
+  margin-right: 2.8125em;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .navigation > .nav-link.active {
+    color: #bdbdbd; }
+    .navigation > .nav-link.active:hover:after {
+      width: 0; }
+  .navigation > .nav-link.search {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    text-indent: -9999px;
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    background-size: 16px 16px;
+    -webkit-mask-image: url("../images/icon_search.svg");
+    mask-image: url("../images/icon_search.svg"); }
+    .navigation > .nav-link.search:active {
+      background-color: #bdbdbd; }
+    .navigation > .nav-link.search:hover {
+      background-color: #26c6da;
+      border: none; }
+  .navigation > .nav-link:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: -8px;
+    left: 0;
+    border-bottom: 3px solid #26c6da;
+    transition: 0.4s; }
+  .navigation > .nav-link:hover:after {
+    width: 100%; }
+  .navigation > .nav-link:active {
+    color: #26c6da;
+    border: none; }
+
+a {
+  color: #bdbdbd;
+  text-decoration: none; }
+  a:hover {
+    color: #26c6da;
+    text-decoration: underline; }
+  a:active {
+    color: #26c6da; }
+
+/*# sourceMappingURL=main.css.map */

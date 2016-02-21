@@ -1,0 +1,121 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+@include font-face("LatoBold", "../fonts/Lato/LatoBold", $file-formats: eot ttf woff);
+@include font-face("LatoItalic", "../fonts/Lato/LatoItalic", $file-formats: eot ttf woff);
+@include font-face("LatoLight", "../fonts/Lato/LatoLight", $file-formats: eot ttf woff);
+@include font-face("LatoRegular", "../fonts/Lato/LatoRegular", $file-formats: eot ttf woff);
+
+$primary-color: #26c6da;
+$grey-color: #bdbdbd;
+$accent-color: #333;
+
+body {
+  font-family: LatoRegular, sans-serif;
+}
+
+div.container {
+  @include outer-container;
+}
+
+div.content-wrapper {
+  @include span-columns(10);
+  @include shift(1)
+}
+
+.nav-header {
+  height: em(200);
+  line-height: em(200);
+}
+
+.logo {
+  font-family: LatoLight, sans-serif;
+  text-decoration: none;
+  font-size: em(36);
+  color: $primary-color !important;
+  float: left;
+
+  & span {
+    font-family: LatoBold, sans-serif;
+    color: #828282;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.navigation {
+  float: right;
+}
+
+.navigation > .nav-link {
+  position: relative;
+  font-family: LatoBold, sans-serif;
+  margin-right: em(45);
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &.active {
+    color: $grey-color;
+    &:hover:after {
+      width: 0;
+    }
+  }
+
+  &.search {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    text-indent: -9999px;
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    background-size: 16px 16px;
+    -webkit-mask-image: url("../images/icon_search.svg");
+    mask-image: url("../images/icon_search.svg");
+
+    &:active {
+      background-color: $grey-color;
+    }
+    &:hover {
+      background-color: $primary-color;
+      border: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: -8px;
+    left: 0;
+    border-bottom: 3px solid $primary-color;
+    transition: 0.4s;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &:active {
+    color: $primary-color;
+    border: none;
+  }
+}
+
+a {
+  color: $grey-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $primary-color;
+  }
+}
