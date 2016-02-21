@@ -13,6 +13,20 @@ $accent-color: #333;
 
 body {
   font-family: LatoRegular, sans-serif;
+
+  a {
+    color: $grey-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $primary-color;
+    }
+  }
 }
 
 div.container {
@@ -47,42 +61,25 @@ div.content-wrapper {
 }
 
 .navigation {
+  font-family: LatoBold, sans-serif;
   float: right;
 }
 
 .navigation > .nav-link {
-  position: relative;
-  font-family: LatoBold, sans-serif;
-  margin-right: em(45);
   color: #000000;
+  position: relative;
+  margin-right: em(45);
   text-transform: uppercase;
   text-decoration: none;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 
   &.active {
     color: $grey-color;
     &:hover:after {
       width: 0;
-    }
-  }
-
-  &.search {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 3px;
-    text-indent: -9999px;
-    width: 16px;
-    height: 16px;
-    background-color: black;
-    background-size: 16px 16px;
-    -webkit-mask-image: url("../images/icon_search.svg");
-    mask-image: url("../images/icon_search.svg");
-
-    &:active {
-      background-color: $grey-color;
-    }
-    &:hover {
-      background-color: $primary-color;
-      border: none;
     }
   }
 
@@ -104,18 +101,24 @@ div.content-wrapper {
     color: $primary-color;
     border: none;
   }
-}
 
-a {
-  color: $grey-color;
-  text-decoration: none;
+  &.search {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    text-indent: -9999px;
+    @include size(16px);
+    background-color: black;
+    background-size: 16px 16px;
+    -webkit-mask-image: url("../images/icon_search.svg");
+    mask-image: url("../images/icon_search.svg");
 
-  &:hover {
-    color: $primary-color;
-    text-decoration: underline;
-  }
-
-  &:active {
-    color: $primary-color;
+    &:active {
+      background-color: $grey-color;
+    }
+    &:hover {
+      background-color: $primary-color;
+      border: none;
+    }
   }
 }
